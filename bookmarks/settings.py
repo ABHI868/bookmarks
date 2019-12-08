@@ -28,6 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+AUTHENCTICATION_BACKENDS = {
+'django.contrib.auth.backends.ModelBackend',
+'django.contrib.auth.backends.EmailAuthBasckend',
+
+}
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
+    'images.apps.ImagesConfig',
 ]
 
 MIDDLEWARE = [
